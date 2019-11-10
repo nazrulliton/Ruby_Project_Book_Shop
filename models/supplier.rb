@@ -27,6 +27,13 @@ def save()
     artists = output.map{|supplier| Supplier.new(supplier)}
   end
 
+  def books()
+      sql = "SELECT * FROM books WHERE book_id = $1"
+      value = [@id]
+      result = SqlRunner.run(sql,value)
+      return result.map{|book| Book.new(record)}
+    end
+
   def self.find_by_id(id)
     sql = "SELECT * FROM suppliers WHERE id = $1"
     values = [id]
