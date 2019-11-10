@@ -21,6 +21,13 @@ def save()
     @id = output['id'].to_i
   end
 
+  def self.all
+    sql = "SELECT * FROM books"
+    output = SqlRunner.run(sql)
+    artists = output.map{|book| Book.new(book)}
+  end
+
+
 
 
 end

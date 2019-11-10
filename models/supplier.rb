@@ -17,7 +17,11 @@ def save()
     @id = output['id'].to_i
   end
 
-
+  def self.all
+    sql = "SELECT * FROM suppliers"
+    output = SqlRunner.run(sql)
+    artists = output.map{|supplier| Supplier.new(supplier)}
+  end
 
 
 

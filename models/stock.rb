@@ -21,6 +21,22 @@ def save()
     @id = output['id'].to_i
   end
 
+  def self.all
+    sql = "SELECT * FROM stock"
+    output = SqlRunner.run(sql)
+    artists = output.map{|stock| Stock.new(artist)}
+  end
+
+  def self.find_by_id(id)
+    sql = "SELECT * FROM stock WHERE id = $1"
+    values = [id]
+    artist = SqlRunner.run(sql,values)[0]
+    return Stock.new(artist)
+  end
+
+
+
+
 
 
 end
