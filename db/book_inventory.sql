@@ -1,17 +1,17 @@
 DROP TABLE stock;
-DROP TABLE book;
-DROP TABLE supplier;
+DROP TABLE books;
+DROP TABLE suppliers;
 
-CREATE TABLE supplier(
+CREATE TABLE suppliers(
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(255),
   address VARCHAR(255)
 );
 
-CREATE TABLE book(
+CREATE TABLE books(
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(255),
-  desription VARCHAR(255),
+  description VARCHAR(255),
   genre VARCHAR(255)
 );
 

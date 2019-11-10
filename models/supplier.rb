@@ -7,5 +7,19 @@ def initialize(options)
   @address = options['address']
 end
 
+def save()
+    sql = "INSERT INTO suppliers (
+    name, address)
+    VALUES ($1, $2)
+    RETURNING id"
+    values = [@name, @address]
+    output = SqlRunner.run(sql,values)[0]
+    @id = output['id'].to_i
+  end
+
+
+
+
+
 
 end

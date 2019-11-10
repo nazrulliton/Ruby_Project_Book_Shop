@@ -11,6 +11,16 @@ def initialize(options)
 end
 
 
+def save()
+    sql = "INSERT INTO stock (
+    quantity, buying_cost, selling_price, book_id, supplier_id)
+    VALUES ($1, $2, $3, $4, $5)
+    RETURNING id"
+    values = [@quantity, @buying_cost, @selling_price, @book_id, @supplier_id]
+    output = SqlRunner.run(sql,values)[0]
+    @id = output['id'].to_i
+  end
+
 
 
 end
