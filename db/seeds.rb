@@ -1,3 +1,14 @@
+require('pry-byebug')
+
+require_relative( '../models/book.rb' )
+require_relative( '../models/supplier.rb' )
+require_relative( '../models/stock.rb' )
+
+
+Stock.delete_all()
+Book.delete_all()
+Supplier.delete_all()
+
 supplier1 = Supplier.new({
   'name' => "Penguin Books",
   'address' => "20 Artic cross, Noveltry, 12-122"
@@ -92,3 +103,6 @@ stock2.save
 stock3.save
 stock4.save
 stock5.save
+
+binding.pry
+nil

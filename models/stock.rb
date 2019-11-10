@@ -1,3 +1,5 @@
+require('pry-byebug')
+
 class Stock
 attr_accessor :id, :quantity, :buying_cost, :selling_price, :book_id, :supplier_id
 
@@ -9,6 +11,7 @@ def initialize(options)
   @book_id = options['book_id']
   @supplier_id = options['supplier_id']
 end
+
 
 
 def save()

@@ -1,3 +1,7 @@
+require('pry-byebug')
+
+
+
 class Supplier
 attr_accessor :id, :name, :address
 

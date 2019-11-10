@@ -1,3 +1,7 @@
+require('pry-byebug')
+
+
+
 class Book
 
 attr_accessor :id, :name, :description, :genre
