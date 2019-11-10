@@ -1,6 +1,6 @@
 DROP TABLE stock;
-DROP TABLE books;
 DROP TABLE suppliers;
+DROP TABLE books;
 
 CREATE TABLE suppliers(
   id SERIAL4 PRIMARY KEY,
@@ -20,6 +20,6 @@ CREATE TABLE stock(
   quantity INT2,
   buying_cost NUMERIC,
   selling_price NUMERIC,
-  book_id INT2 REFERENCES book(id),
-  supplier_id INT2 REFERENCES supplier(id)
+  book_id INT2 REFERENCES books(id),
+  supplier_id INT2 REFERENCES suppliers(id)
 );
