@@ -34,6 +34,11 @@ def save()
     return Stock.new(stock)
   end
 
+  def self.delete_all
+    sql = "DELETE FROM stock"
+    SqlRunner.run(sql)
+  end
+
 
 
 

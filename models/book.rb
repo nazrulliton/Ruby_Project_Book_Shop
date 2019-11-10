@@ -34,6 +34,9 @@ def save()
     return Book.new(book)
   end
 
-
+  def self.delete_all
+      sql = "DELETE FROM books"
+      SqlRunner.run(sql)
+    end
 
 end
