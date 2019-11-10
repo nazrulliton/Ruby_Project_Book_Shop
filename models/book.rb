@@ -14,6 +14,13 @@ def initialize (options)
 
 end
 
+def supplier()
+    sql = "SELECT * FROM suppliers WHERE supplier_id = $1"
+    value = [@id]
+    result = SqlRunner.run(sql,value)
+    return result.map{|supplier| Supplier.new(supplier)}
+  end
+
 
 def save()
     sql = "INSERT INTO books (

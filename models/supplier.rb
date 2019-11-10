@@ -31,7 +31,7 @@ def save()
       sql = "SELECT * FROM books WHERE book_id = $1"
       value = [@id]
       result = SqlRunner.run(sql,value)
-      return result.map{|book| Book.new(record)}
+      return result.map{|book| Book.new(book)}
     end
 
   def self.find_by_id(id)
