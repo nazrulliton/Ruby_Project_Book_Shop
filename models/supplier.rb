@@ -1,6 +1,6 @@
 require('pry-byebug')
 
-
+require_relative( '../db/sql_runner' )
 
 class Supplier
 attr_accessor :id, :name, :address

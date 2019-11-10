@@ -1,5 +1,7 @@
 require('pry-byebug')
 
+require_relative( '../db/sql_runner' )
+
 class Stock
 attr_accessor :id, :quantity, :buying_cost, :selling_price, :book_id, :supplier_id
 
