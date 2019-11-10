@@ -27,6 +27,12 @@ def save()
     artists = output.map{|book| Book.new(book)}
   end
 
+  def self.find_by_id(id)
+    sql = "SELECT * FROM books WHERE id = $1"
+    values = [id]
+    books = SqlRunner.run(sql,values)[0]
+    return Book.new(book)
+  end
 
 
 

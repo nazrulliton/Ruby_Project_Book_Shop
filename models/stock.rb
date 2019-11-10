@@ -30,8 +30,8 @@ def save()
   def self.find_by_id(id)
     sql = "SELECT * FROM stock WHERE id = $1"
     values = [id]
-    artist = SqlRunner.run(sql,values)[0]
-    return Stock.new(artist)
+    stock = SqlRunner.run(sql,values)[0]
+    return Stock.new(stock)
   end
 
 

@@ -23,7 +23,12 @@ def save()
     artists = output.map{|supplier| Supplier.new(supplier)}
   end
 
-
+  def self.find_by_id(id)
+    sql = "SELECT * FROM suppliers WHERE id = $1"
+    values = [id]
+    supplier = SqlRunner.run(sql,values)[0]
+    return Supplier.new(supplier)
+  end
 
 
 end
