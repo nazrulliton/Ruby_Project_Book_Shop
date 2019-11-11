@@ -10,6 +10,6 @@ get '/suppliers' do
 end
 
 get '/suppliers/:id' do
-  @supplier = Supplier.find_by_id(params['id'].to_i)
+  @suppliers = Supplier.find_by_id(params['id'].to_i)
   erb(:"suppliers/show")
 end

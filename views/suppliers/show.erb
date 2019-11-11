@@ -1,3 +1,12 @@
+
 <h1><%= @supplier.name %> (book)</h1>
 
 <p>Address: <%= @supplier.address %></p>
+
+<h3>Published the following:</h3>
+
+<ul>
+  <% @supplier.books.each do |book| %>
+  <li><%= book.name %></li>
+  <% end %>
+</ul>

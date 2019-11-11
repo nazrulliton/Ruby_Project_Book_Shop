@@ -10,6 +10,6 @@ get '/books' do
 end
 
 get '/books/:id' do
-  @books = Book.find_by_id(params['id'].to_i)
+  @book = Book.find_by_id(params['id'].to_i)
   erb(:"books/show")
 end

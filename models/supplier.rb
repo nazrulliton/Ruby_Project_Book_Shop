@@ -28,7 +28,7 @@ def save()
   end
 
   def books()
-      sql = "SELECT * FROM books WHERE book_id = $1"
+      sql = "SELECT * FROM books WHERE id = $1"
       value = [@id]
       result = SqlRunner.run(sql,value)
       return result.map{|book| Book.new(book)}

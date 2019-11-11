@@ -15,7 +15,7 @@ def initialize (options)
 end
 
 def supplier()
-    sql = "SELECT * FROM suppliers WHERE supplier_id = $1"
+    sql = "SELECT * FROM suppliers WHERE id = $1"
     value = [@id]
     result = SqlRunner.run(sql,value)
     return result.map{|supplier| Supplier.new(supplier)}
@@ -41,7 +41,7 @@ def save()
   def self.find_by_id(id)
     sql = "SELECT * FROM books WHERE id = $1"
     values = [id]
-    books = SqlRunner.run(sql,values)[0]
+    book = SqlRunner.run(sql,values)[0]
     return Book.new(book)
   end
 
