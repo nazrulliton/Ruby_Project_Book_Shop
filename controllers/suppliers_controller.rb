@@ -6,7 +6,7 @@ also_reload( '../models/*' )
 
 get '/suppliers' do
   @supplier = Supplier.all
-  erb ( :"suppliers/index" )
+  erb (:"suppliers/index")
 end
 
 # get '/suppliers/:id' do
