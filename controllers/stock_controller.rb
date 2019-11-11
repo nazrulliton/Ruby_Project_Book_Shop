@@ -13,7 +13,7 @@ get '/stock' do
 end
 
 
-# get '/stock/:id' do
-#   @stock = Stock.find(params['id'].to_i)
-#   erb(:"stock/show")
-# end
+get '/stock/:id' do
+  @stock = Stock.find(params['id'].to_i)
+  erb(:"stock/show")
+end
