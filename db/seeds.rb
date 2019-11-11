@@ -95,7 +95,7 @@ stock4 = Stock.new({
         });
 
 stock5 = Stock.new({
-          'book_name' => book4.name,
+          'book_name' => book5.name,
           'quantity' => 14,
           'buying_cost' => 5,
           'selling_price' => 9,
