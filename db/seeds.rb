@@ -47,7 +47,7 @@ book4 = Book.new({
     });
 
 book5 = Book.new({
-  'name' => "Art of way",
+  'name' => "Jack Ryan 1",
   'description' => "military manual",
   'genre' => 'action'
   });
@@ -77,6 +77,7 @@ stock2 = Stock.new({
     });
 
 stock3 = Stock.new({
+      'book_name' => book3.name,
       'quantity' => 5,
       'buying_cost' => 4,
       'selling_price' => 7,
@@ -85,6 +86,7 @@ stock3 = Stock.new({
 
 
 stock4 = Stock.new({
+        'book_name' => book4.name,
         'quantity' => 13,
         'buying_cost' => 2,
         'selling_price' => 9,
@@ -93,6 +95,7 @@ stock4 = Stock.new({
         });
 
 stock5 = Stock.new({
+          'book_name' => book4.name,
           'quantity' => 14,
           'buying_cost' => 5,
           'selling_price' => 9,
