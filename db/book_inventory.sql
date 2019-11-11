@@ -17,6 +17,7 @@ CREATE TABLE books(
 
 CREATE TABLE stock(
   id SERIAL4 PRIMARY KEY,
+  book_name REFERENCES books(name)
   quantity INT2,
   buying_cost NUMERIC,
   selling_price NUMERIC,

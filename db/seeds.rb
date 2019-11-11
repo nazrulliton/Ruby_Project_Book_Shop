@@ -59,6 +59,7 @@ book4.save
 book5.save
 
 stock1 = Stock.new({
+  'book_name' => book1.name,
   'quantity' => 50,
   'buying_cost' => 1,
   'selling_price' => 12,
@@ -67,6 +68,7 @@ stock1 = Stock.new({
   });
 
 stock2 = Stock.new({
+    'book_name' => book2.name,
     'quantity' => 50,
     'buying_cost' => 1,
     'selling_price' => 10,

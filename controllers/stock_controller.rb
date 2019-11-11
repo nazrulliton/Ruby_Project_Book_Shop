@@ -18,7 +18,7 @@ get '/stock/:id' do
   erb(:"stock/show")
 end
 
-post '/stocks' do
+post '/stock' do
   stock = Stock.new(params)
   stock.save
   redirect to("/stock")
