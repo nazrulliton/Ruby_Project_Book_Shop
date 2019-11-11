@@ -24,7 +24,7 @@ def save()
   def self.all
     sql = "SELECT * FROM suppliers"
     output = SqlRunner.run(sql)
-    artists = output.map{|supplier| Supplier.new(supplier)}
+    result = output.map{|supplier| Supplier.new(supplier)}
   end
 
   def books()

@@ -29,7 +29,7 @@ def save()
   def self.all
     sql = "SELECT * FROM stock"
     output = SqlRunner.run(sql)
-    artists = output.map{|stock| Stock.new(artist)}
+    result = output.map{|stock| Stock.new(artist)}
   end
 
   def self.find_by_id(id)
