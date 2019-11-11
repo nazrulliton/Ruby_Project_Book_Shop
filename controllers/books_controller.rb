@@ -9,7 +9,7 @@ get '/books' do
   erb (:"books/index")
 end
 
-# get '/books/:id' do
-#   @books = Book.find(params['id'].to_i)
-#   erb(:"books/show")
-# end
+get '/books/:id' do
+  @books = Book.find(params['id'].to_i)
+  erb(:"books/show")
+end
