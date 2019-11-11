@@ -3,10 +3,11 @@ require('pry-byebug')
 require_relative( '../db/sql_runner' )
 
 class Stock
-attr_accessor :id, :quantity, :buying_cost, :selling_price, :book_id, :supplier_id
+attr_accessor :id, :book_name, :quantity, :buying_cost, :selling_price, :book_id, :supplier_id
 
 def initialize(options)
   @id = options['id'].to_i if options['id']
+  @book_name = options['book_name']
   @quantity = options['quantity']
   @buying_cost = options['buying_cost']
   @selling_price = options['selling_price']
@@ -18,10 +19,10 @@ end
 
 def save()
     sql = "INSERT INTO stock (
-    quantity, buying_cost, selling_price, book_id, supplier_id)
-    VALUES ($1, $2, $3, $4, $5)
+    book_name, quantity, buying_cost, selling_price, book_id, supplier_id)
+    VALUES ($1, $2, $3, $4, $5, $6)
     RETURNING id"
-    values = [@quantity, @buying_cost, @selling_price, @book_id, @supplier_id]
+    values = [@book_name,@quantity, @buying_cost, @selling_price, @book_id, @supplier_id]
     output = SqlRunner.run(sql,values)[0]
     @id = output['id'].to_i
   end

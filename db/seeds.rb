@@ -59,7 +59,7 @@ book4.save
 book5.save
 
 stock1 = Stock.new({
-  'book_name' => book1.name,
+  'book_name' => "Harry Potter 1",
   'quantity' => 50,
   'buying_cost' => 1,
   'selling_price' => 12,
@@ -68,7 +68,7 @@ stock1 = Stock.new({
   });
 
 stock2 = Stock.new({
-    'book_name' => book2.name,
+    'book_name' => "Harry Potter 2",
     'quantity' => 50,
     'buying_cost' => 1,
     'selling_price' => 10,
@@ -77,7 +77,7 @@ stock2 = Stock.new({
     });
 
 stock3 = Stock.new({
-      'book_name' => book3.name,
+      'book_name' => "Jack Reacher 1",
       'quantity' => 5,
       'buying_cost' => 4,
       'selling_price' => 7,
@@ -86,7 +86,7 @@ stock3 = Stock.new({
 
 
 stock4 = Stock.new({
-        'book_name' => book4.name,
+        'book_name' => "Jack Reacher 2",
         'quantity' => 13,
         'buying_cost' => 2,
         'selling_price' => 9,
@@ -95,7 +95,7 @@ stock4 = Stock.new({
         });
 
 stock5 = Stock.new({
-          'book_name' => book5.name,
+          'book_name' => "Jack Ryan 1",
           'quantity' => 14,
           'buying_cost' => 5,
           'selling_price' => 9,
