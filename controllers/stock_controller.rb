@@ -17,3 +17,14 @@ get '/stock/:id' do
   @stock = Stock.find_by_id(params['id'].to_i)
   erb(:"stock/show")
 end
+
+post '/stocks' do
+  stock = Stock.new(params)
+  stock.save
+  redirect to("/stock")
+end
+#
+# post '/stocks/:id/delete' do
+#   Stock.destroy(params[:id])
+#   redirect to("/stocks")
+# end
