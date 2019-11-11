@@ -1,0 +1,28 @@
+<h1>Stock List</h1>
+
+<table>
+  <tr>
+    <th>Quantity</th>
+    <th></th>
+    <th>Buying Cost</th>
+    <th></th>
+    <th>Selling Price</th>
+    <th></th>
+    <th>Book ID</th>
+    <th></th>
+    <th>Supplier ID</th>
+  </tr>
+  <% for stock in @stock%>
+  <tr>
+    <td><a href="/stock/<%= stock.id %>"><%= stock.quantity %></a></td>
+    <td>|</td>
+    <td><%= stock.buying_cost %></td>
+    <td>|</td>
+    <td><%= stock.selling_price %></td>
+    <td>|</td>
+    <td><%= stock.book_id %></td>
+    <td>|</td>
+    <td><%= stock.supplier_id %></td>
+  </tr>
+  <% end %>
+</table>
