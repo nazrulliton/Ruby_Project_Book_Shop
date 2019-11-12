@@ -2,6 +2,8 @@
 
 <table>
   <tr>
+    <th>Book name</th>
+    <th></th>
     <th>Quantity</th>
     <th></th>
     <th>Buying Cost</th>
@@ -14,7 +16,9 @@
   </tr>
   <% for stock in @stock%>
   <tr>
-    <td><a href="/stock/<%= stock.id %>"><%= stock.quantity %></a></td>
+    <td><a href="/stock/<%= stock.id %>"><%= stock.book_name %></a></td>
+    <td>|</td>
+    <td><%= stock.quantity%></td>
     <td>|</td>
     <td><%= stock.buying_cost %></td>
     <td>|</td>

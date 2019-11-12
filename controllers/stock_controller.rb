@@ -12,9 +12,9 @@ get '/stock' do
   erb ( :"stock/index" )
 end
 
-get '/stock/new' do
+get '/stock' do
   @stock = Stock.all
-  erb ( :"stock/index" )
+  erb ( :"stock/new" )
 end
 
 get '/stock/:id' do

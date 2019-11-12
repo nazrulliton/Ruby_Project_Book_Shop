@@ -1,5 +1,4 @@
 require('pry-byebug')
-
 require_relative( '../models/book.rb' )
 require_relative( '../models/supplier.rb' )
 require_relative( '../models/stock.rb' )
@@ -13,6 +12,7 @@ supplier1 = Supplier.new({
   'name' => "Penguin Books",
   'address' => "20 Artic cross, Noveltry, 12-122"
   });
+
   supplier2 = Supplier.new({
     'name' => "Wizzard Books",
     'address' => "420 Draghorn Alley, Peru"
