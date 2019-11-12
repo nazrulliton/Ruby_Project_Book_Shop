@@ -13,3 +13,9 @@ get '/books/:id' do
   @book = Book.find_by_id(params['id'].to_i)
   erb(:"books/show")
 end
+
+post '/books' do
+  book = Book.new(params)
+  book.save()
+  redirect to ('/books')
+end
