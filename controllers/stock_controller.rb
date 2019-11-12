@@ -12,6 +12,10 @@ get '/stock' do
   erb ( :"stock/index" )
 end
 
+get '/stock/new' do
+  @stock = Stock.all
+  erb ( :"stock/index" )
+end
 
 get '/stock/:id' do
   @stock = Stock.find_by_id(params['id'].to_i)
@@ -23,8 +27,3 @@ post '/stock' do
   stock.save
   redirect to("/stock")
 end
-#
-# post '/stocks/:id/delete' do
-#   Stock.destroy(params[:id])
-#   redirect to("/stocks")
-# end
