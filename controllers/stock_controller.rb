@@ -24,6 +24,13 @@ get '/stock/:id' do
   erb(:"stock/show")
 end
 
+get '/stock/:id/edit' do
+  @suppliers = Supplier.all
+  @books = Book.all
+  @stock = Stock.find_by_id(params['id'])
+  erb (:'stock/edit')
+end
+
 post '/stock' do
   stock = Stock.new(params)
   stock.save
@@ -33,11 +40,4 @@ end
 post '/stock/:id/delete' do
   Stock.delete(params[:id])
   redirect to ('/stock')
-end
-
-post '/stock/:id/edit' do
-  @suppliers = Supplier.all
-  @books = Book.all
-  @stock = Stock.find_by_id(params['id'])
-  erb (:'stock/edit')
 end
