@@ -25,7 +25,7 @@ post '/books' do
   redirect to ('/books')
 end
 
-# post '/books/:id/delete' do
-#   Book.delete(params[:id])
-#   redirect to ('/books')
-# end
+post '/books/:id/delete' do
+  Book.delete(params[:id])
+  redirect to ('/books')
+end
