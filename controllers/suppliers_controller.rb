@@ -14,3 +14,9 @@ get '/suppliers/:id' do
   @books =  @supplier.books()
   erb(:"suppliers/show")
 end
+
+post '/suppliers' do
+  supplier = Supplier.new(params)
+  supplier.save()
+  redirect to ('/suppliers')
+end
