@@ -1,0 +1,43 @@
+<h1>Add New Record</h1>
+
+<form action="/stock" method="post">
+
+  <label for = "book_name">
+    Enter Book title:
+      <input type="text" name= "book_name" id="book_name"/>
+  </label>
+
+  <label for="quantity">Quantity:
+    <input type="text" name="quantity" id="quantity"/>
+  </label>
+
+  <label for="buy_cost">Buying Cost:
+    <input type="text" name="buying_cost" id="buying_cost"/>
+  </label>
+
+  <label for="selling_cost">Selling Cost:
+    <input type="text" name="selling_cost" id="selling_cost"/>
+  </label>
+
+
+  <label>
+    Select Book id:
+      <select name= "book_id" id="books">
+        <% for book in @books %>
+          <option value="<%=book.id%>"><%= book.name %></option>
+        <% end %>
+      </select>
+  </label>
+
+  <label>
+    Select Supplier id:
+      <select name= "supplier_id" id="suppliers">
+        <% for supplier in @suppliers %>
+          <option value="<%=supplier.id%>"><%= supplier.name %></option>
+        <% end %>
+      </select>
+  </label>
+
+  <input class="" type='submit' value="Create">
+
+</form>
