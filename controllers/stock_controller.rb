@@ -15,7 +15,7 @@ end
 get '/stock/new' do
   @stock = Stock.all
   @books = Book.all
-  @suppliers = Supplier.all 
+  @suppliers = Supplier.all
   erb ( :"stock/new" )
 end
 
@@ -33,4 +33,11 @@ end
 post '/stock/:id/delete' do
   Stock.delete(params[:id])
   redirect to ('/stock')
+end
+
+post '/stock/:id/edit' do
+  @suppliers = Supplier.all
+  @books = Book.all
+  @stock = Stock.find_by_id(params['id'])
+  erb (:'stock/edit')
 end
