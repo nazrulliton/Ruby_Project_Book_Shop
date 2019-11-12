@@ -18,7 +18,14 @@
   <tr>
     <td><a href="/stock/<%= stock.id %>"><%= stock.book_name %></a></td>
     <td>|</td>
-    <td><%= stock.quantity%></td>
+
+
+      <% if stock.quantity.to_i < 10 %>
+        <td><font color=red><%= stock.quantity %></font></td>
+      <% else %>
+        <td><%= stock.quantity %></td>
+      <% end %>
+
     <td>|</td>
     <td><%= stock.buying_cost %></td>
     <td>|</td>
