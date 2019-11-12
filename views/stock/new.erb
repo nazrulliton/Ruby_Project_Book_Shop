@@ -22,7 +22,7 @@
 
   <label>
     Select Book id:
-      <select name= "book_id" id="books">
+      <select name= "book_id" id="books_id">
         <% for book in @books %>
           <option value="<%=book.id%>"><%= book.name %></option>
         <% end %>
@@ -31,7 +31,7 @@
 
   <label>
     Select Supplier id:
-      <select name= "supplier_id" id="suppliers">
+      <select name= "supplier_id" id="suppliers_id">
         <% for supplier in @suppliers %>
           <option value="<%=supplier.id%>"><%= supplier.name %></option>
         <% end %>

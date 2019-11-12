@@ -12,8 +12,10 @@ get '/stock' do
   erb ( :"stock/index" )
 end
 
-get '/stock' do
+get '/stock/new' do
   @stock = Stock.all
+  @books = Book.all
+  @suppliers = Supplier.all 
   erb ( :"stock/new" )
 end
 

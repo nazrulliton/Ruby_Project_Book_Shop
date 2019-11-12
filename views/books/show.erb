@@ -1,11 +1,5 @@
-<h1><%= @book.name %> (book)</h1>
+<h1><%= @book.name %> </h1>
 
 <p>Description: <%= @book.description %></p>
 
-<h3>Published by:</h3>
-
-<ul>
-  <% @book.supplier.each do |supplier| %>
-  <li><%= supplier.name %></li>
-  <% end %>
-</ul>
+<p>Published by: <%= @book.supplier.name %></p>

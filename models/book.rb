@@ -14,13 +14,6 @@ def initialize (options)
 
 end
 
-def supplier()
-    sql = "SELECT * FROM suppliers WHERE id = $1"
-    value = [@id]
-    result = SqlRunner.run(sql,value)
-    return result.map{|supplier| Supplier.new(supplier)}
-  end
-
 
 def save()
     sql = "INSERT INTO books (
@@ -32,11 +25,24 @@ def save()
     @id = output['id'].to_i
   end
 
+  def supplier()
+      sql = "SELECT suppliers.* FROM suppliers
+      INNER JOIN stock
+      ON stock.supplier_id = suppliers.id
+      WHERE book_id = $1"
+      value = [@id]
+      result = SqlRunner.run(sql,value).first()
+      return Supplier.new(result)
+  end
+
+
   def self.all
     sql = "SELECT * FROM books"
     output = SqlRunner.run(sql)
     result = output.map{|book| Book.new(book)}
   end
+
+
 
   def self.find_by_id(id)
     sql = "SELECT * FROM books WHERE id = $1"

@@ -16,6 +16,7 @@ end
 
 get '/books/:id' do
   @book = Book.find_by_id(params['id'].to_i)
+  @supplier = @book.supplier()
   erb(:"books/show")
 end
 
