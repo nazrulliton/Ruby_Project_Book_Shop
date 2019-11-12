@@ -9,6 +9,11 @@ get '/suppliers' do
   erb (:"suppliers/index")
 end
 
+get '/suppliers/new' do
+  @suppliers = Supplier.all
+  erb (:"suppliers/new")
+end
+
 get '/suppliers/:id' do
   @supplier = Supplier.find_by_id(params['id'].to_i)
   @books =  @supplier.books()
