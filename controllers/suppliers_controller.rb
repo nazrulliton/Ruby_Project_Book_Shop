@@ -25,3 +25,8 @@ post '/suppliers' do
   supplier.save()
   redirect to ('/suppliers')
 end
+
+post '/suppliers/:id/delete' do
+  Suppliers.delete(params[:id])
+  redirect to ('/suppliers')
+end

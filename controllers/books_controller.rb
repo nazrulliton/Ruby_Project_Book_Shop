@@ -24,3 +24,8 @@ post '/books' do
   book.save()
   redirect to ('/books')
 end
+
+# post '/books/:id/delete' do
+#   Book.delete(params[:id])
+#   redirect to ('/books')
+# end
