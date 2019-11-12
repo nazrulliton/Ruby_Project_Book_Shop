@@ -37,7 +37,9 @@ post '/stock' do
   redirect to("/stock")
 end
 
-post '/stock/:id/delete' do
-  Stock.delete(params[:id])
-  redirect to ('/stock')
-end
+
+# post '/stock/:id/delete' do
+#   stock = Stock.find_by_id(params['id']
+#   Stock.delete()
+#   redirect to ('/stock')
+# end

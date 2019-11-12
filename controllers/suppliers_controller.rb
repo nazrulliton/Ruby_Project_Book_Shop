@@ -27,6 +27,6 @@ post '/suppliers' do
 end
 
 post '/suppliers/:id/delete' do
-  Suppliers.delete(params[:id])
+  Supplier.delete(params[:id])
   redirect to ('/suppliers')
 end
