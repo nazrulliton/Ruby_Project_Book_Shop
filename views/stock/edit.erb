@@ -1,18 +1,18 @@
-<form action="/stock/<% stock.id%>" method="post">
+<form action="/stock/<% @stock.id%>" method="post">
 
   <label for = "book_name">Enter Book title:</label>
   <input
   type="text"
   name= "book_name"
   id="book_name"
-  value="<% stock.book_name%>"/>
+  value="<%= @stock.book_name%>"/>
 
   <label for="quantity">Quantity:</label>
     <input
     type="number"
     name="quantity"
     id="quantity"
-    value="<% stock.quantity%>"/>
+    value="<%= @stock.quantity%>"/>
 
 
   <label for="buy_cost">Buying Cost:</label>
@@ -20,7 +20,7 @@
     type="text"
     name="buying_cost"
     id="buying_cost"
-    value="<% stock.buying_cost%>"/>
+    value="<%= @stock.buying_cost%>"/>
 
 
   <label for="selling_cost">Selling Cost:</label>
@@ -28,7 +28,7 @@
     type="text"
     name="selling_cost"
     id="selling_cost"
-    value="<% stock.selling_cost%>"/>
+    value="<%= @stock.selling_price%>"/>
 
 
 

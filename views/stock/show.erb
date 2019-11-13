@@ -8,6 +8,8 @@
 <p>Book ID: <%= @stock.book_id %></p>
 <p>Supplier ID:: <%= @stock.supplier_id %></p>
 
+<a href="/stock/<%= @stock.id%>/edit">Edit</a>
+
 <form action="/stock/<%= @stock.id%>/delete" method="POST">
 <input type="submit" value="Delete">
 </form>
