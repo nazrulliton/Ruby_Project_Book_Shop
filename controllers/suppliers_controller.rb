@@ -27,6 +27,7 @@ post '/suppliers' do
 end
 
 post '/suppliers/:id/delete' do
-  Supplier.delete(params[:id])
-  redirect to ('/suppliers')
+  supplier = Supplier.find_by_id(params['id'])
+  supplier.delete
+  redirect to "/suppliers"
 end

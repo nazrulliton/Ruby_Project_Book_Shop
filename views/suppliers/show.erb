@@ -1,4 +1,3 @@
-
 <h1><%= @supplier.name %> (book)</h1>
 
 <p>Address: <%= @supplier.address %></p>
@@ -10,3 +9,7 @@
   <li><%= book.name %></li>
   <% end %>
 </ul>
+
+<form action="/suppliers/<%= @supplier.id%>/delete" method="POST">
+<input type="submit" value="Delete">
+</form>

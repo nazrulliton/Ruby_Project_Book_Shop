@@ -43,7 +43,7 @@ def save()
     SqlRunner.run(sql)
   end
 
-  def self.delete(id)
+  def delete(id)
      sql = "DELETE FROM stock WHERE id = $1"
      values=[id]
      result = SqlRunner.run(sql,values)
