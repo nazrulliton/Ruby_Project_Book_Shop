@@ -1,0 +1,14 @@
+<h1>Edit Supplier Info</h1>
+
+<form action="/suppliers" method="post">
+  <label for = "name">
+    Edit Supplier name:
+      <input type="text" name= "name" value="<%= @supplier.name %>" id="name"/>
+  </label>
+  <label for = "address">
+    Edit Address of Supplier:
+      <input type="text" name= "address" value="<%= @supplier.address %>" id="address"/>
+  </label>
+
+<input class="" type='submit' value="Add">
+</form>
