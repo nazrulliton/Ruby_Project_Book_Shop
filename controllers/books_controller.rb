@@ -21,15 +21,17 @@ get '/books/:id' do
 end
 
 get '/books/:id/edit' do
-  @book = Book.find(params['id'])
+  @book = Book.find_by_id(params['id'])
   @suppliers = Supplier.all
   @stock = Stock.all
-  erb(:books/edit”)
+  erb(:"books/edit")
 end
 
-# get '/books/:id/delete' do
-# erb(:"")
-# end
+post '/books/:id' do
+  book = Book.new(params)
+  book.update
+  redirect to "/books/#{params['id']}"
+end
 
 post '/books' do
   book = Book.new(params)

@@ -1,0 +1,19 @@
+<h1>Edit Book</h1>
+
+<form action="/books" method="post">
+  <label for = "name">
+    Edit Book Title:
+      <input type="text" name= "name" value="<%= @book.name %>" id="name"/>
+
+  </label>
+  <label for = "description">
+    Edit  description:
+      <input type="text" name= "description" value="<%= @book.description%>" id="description"/>
+  </label>
+  <label for = "genre">
+  Change Genre:
+      <input type="text" name= "genre" value="<%= @book.genre %>" id="genre"/>
+  </label>
+
+<input class="" type='submit' value="Add">
+</form>
