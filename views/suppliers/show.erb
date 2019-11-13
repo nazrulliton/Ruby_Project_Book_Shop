@@ -10,6 +10,8 @@
   <% end %>
 </ul>
 
+<a href="/suppliers/<%= @supplier.id %>/edit">Edit</a>
+
 <form action="/suppliers/<%= @supplier.id%>/delete" method="POST">
 <input type="submit" value="Delete">
 </form>
