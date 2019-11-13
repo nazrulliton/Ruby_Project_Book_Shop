@@ -25,6 +25,20 @@ def save()
     @id = output['id'].to_i
   end
 
+  def update()
+      sql = "UPDATE books
+      SET
+      (
+        book_name, quantity, buying_cost, selling_price, book_id, supplier_id
+      ) =
+      (
+        $1, $2, $3, $4, $5, $6
+      )
+      WHERE id = $7"
+      values = [@book_name, @quantity, @buying_cost, @selling_price, @book_id, @supplier_id @id]
+      SqlRunner.run(sql, values)
+    end
+
   def self.all
     sql = "SELECT * FROM stock"
     output = SqlRunner.run(sql)
