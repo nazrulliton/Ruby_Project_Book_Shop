@@ -19,6 +19,12 @@ get '/stock/new' do
   erb ( :"stock/new" )
 end
 
+post '/stock' do
+  stock = Stock.new(params)
+  stock.save
+  redirect to("/stock")
+end
+
 get '/stock/:id' do
   @stock = Stock.find_by_id(params['id'].to_i)
   erb(:"stock/show")
@@ -31,15 +37,10 @@ get '/stock/:id/edit' do
   erb (:'stock/edit')
 end
 
-post '/stock' do
-  stock = Stock.new(params)
-  stock.save
-  redirect to("/stock")
+
+
+post '/stock/:id/delete' do
+  stock = Stock.find_by_id(params['id'])
+  stock.delete
+  redirect to "/stock"
 end
-
-
-# post '/stock/:id/delete' do
-#   stock = Stock.find_by_id(params['id']
-#   Stock.delete()
-#   redirect to ('/stock')
-# end

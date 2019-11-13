@@ -35,7 +35,7 @@ def save()
         $1, $2, $3, $4, $5, $6
       )
       WHERE id = $7"
-      values = [@book_name, @quantity, @buying_cost, @selling_price, @book_id, @supplier_id @id]
+      values = [@book_name, @quantity, @buying_cost, @selling_price, @book_id, @supplier_id, @id]
       SqlRunner.run(sql, values)
     end
 

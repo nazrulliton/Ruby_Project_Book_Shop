@@ -7,3 +7,7 @@
 
 <p>Book ID: <%= @stock.book_id %></p>
 <p>Supplier ID:: <%= @stock.supplier_id %></p>
+
+<form action="/stock/<%= @stock.id%>/delete" method="POST">
+<input type="submit" value="Delete">
+</form>
