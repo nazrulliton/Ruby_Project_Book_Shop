@@ -3,21 +3,21 @@
 <table>
   <tr>
     <th>Book name</th>
-    <th></th>
+
     <th>Quantity</th>
-    <th></th>
+
     <th>Buying Cost</th>
-    <th></th>
+
     <th>Selling Price</th>
-    <th></th>
+
     <th>Book ID</th>
-    <th></th>
+
     <th>Supplier ID</th>
   </tr>
   <% for stock in @stock%>
   <tr>
     <td><a href="/stock/<%= stock.id %>"><%= stock.book_name %></a></td>
-    <td>|</td>
+
 
 
       <% if stock.quantity.to_i < 10 %>
@@ -26,16 +26,16 @@
         <td><%= stock.quantity %></td>
       <% end %>
 
-    <td>|</td>
+
     <td><%= stock.buying_cost %></td>
-    <td>|</td>
+
     <td><%= stock.selling_price %></td>
-    <td>|</td>
+
     <td><%= stock.book_id %></td>
-    <td>|</td>
+    
     <td><%= stock.supplier_id %></td>
 
-    
+
   </tr>
   <% end %>
 </table>
