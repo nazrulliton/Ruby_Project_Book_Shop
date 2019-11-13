@@ -20,6 +20,17 @@ get '/books/:id' do
   erb(:"books/show")
 end
 
+get '/books/:id/edit' do
+  @book = Book.find(params['id'])
+  @suppliers = Supplier.all
+  @stock = Stock.all
+  erb(:books/edit”)
+end
+
+# get '/books/:id/delete' do
+# erb(:"")
+# end
+
 post '/books' do
   book = Book.new(params)
   book.save()

@@ -21,6 +21,6 @@ CREATE TABLE stock(
   quantity INT2,
   buying_cost NUMERIC,
   selling_price NUMERIC,
-  book_id INT2 REFERENCES books(id),
-  supplier_id INT2 REFERENCES suppliers(id)
+  book_id INT2 REFERENCES books(id) ON DELETE CASCADE,
+  supplier_id INT2 REFERENCES suppliers(id) ON DELETE CASCADE
 );
