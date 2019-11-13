@@ -30,8 +30,8 @@ def save()
     (
       $1, $2
     )
-    WHERE id = $1"
-    values = [@name, @address]
+    WHERE id = $3"
+    values = [@name, @address, @id]
     SqlRunner.run(sql, values)
   end
 

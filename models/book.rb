@@ -30,7 +30,6 @@ def save()
       SET
       (
         name,
-
         description,
         genre
       ) =
