@@ -3,7 +3,7 @@
 <p>Quantity: <%= @stock.quantity %></p>
 <p>Buying Price(£): <%= @stock.buying_cost %></p>
 <p>Selling Price(£): <%= @stock.selling_price %></p>
-<p>Profit Margin: <% @stock.selling_price +  @stock.buying_cost %></p>
+<p>Profit Margin(£): <%= @stock.selling_price.to_i -  @stock.buying_cost.to_i %></p>
 
 <p>Book ID: <%= @stock.book_id %></p>
 <p>Supplier ID:: <%= @stock.supplier_id %></p>
