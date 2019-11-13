@@ -10,12 +10,36 @@
     height: 100vh;
 }
 
+nav {
+  display: flex;
+  width: 100%
+}
 
-ul {
+nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 60px;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  width: 100%;
+  }
+
+li {
+  float: right ;
+}
+
+li a {
+  display: block;
+  color: darkred;
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: grey;
 }
 
 h1 {
