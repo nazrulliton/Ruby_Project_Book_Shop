@@ -54,11 +54,15 @@ table {
 
 table, th, td {
   border: 2px solid black;
+
 }
+
+
+
 p {
   font-size: 1.2em;
   color: darkred;
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .y{
