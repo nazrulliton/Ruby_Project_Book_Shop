@@ -14,6 +14,12 @@ get '/books/new' do
   erb (:"books/new")
 end
 
+post '/books' do
+  book = Book.new(params)
+  book.save()
+  redirect to ('/books')
+end
+
 get '/books/:id' do
   @book = Book.find_by_id(params['id'].to_i)
   @supplier = @book.supplier()
@@ -27,19 +33,16 @@ get '/books/:id/edit' do
   erb(:"books/edit")
 end
 
+
 post '/books/:id' do
   book = Book.new(params)
   book.update
   redirect to "/books/#{params['id']}"
 end
 
-post '/books' do
-  book = Book.new(params)
-  book.save()
-  redirect to ('/books')
-end
 
 post '/books/:id/delete' do
-  Book.delete(params[:id])
-  redirect to ('/books')
+  book = Book.find_by_id(params['id'])
+  book.delete
+  redirect to "/books"
 end

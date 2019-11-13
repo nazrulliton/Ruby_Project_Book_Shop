@@ -1,6 +1,6 @@
 <h1>Edit Book</h1>
 
-<form action="/books" method="post">
+<form action="/books/<%= @book.id %>" method="post">
   <label for = "name">
     Edit Book Title:
       <input type="text" name= "name" value="<%= @book.name %>" id="name"/>

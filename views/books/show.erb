@@ -5,3 +5,8 @@
 <p>Published by: <%= @book.supplier.name %></p>
 
 <a href="/books/<%= @book.id %>/edit">Edit</a>
+
+
+<form action="/books/<%= @book.id%>/delete" method="POST">
+<input type="submit" value="Delete">
+</form>

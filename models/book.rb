@@ -65,7 +65,7 @@ def save()
   def self.find_by_id(id)
     sql = "SELECT * FROM books WHERE id = $1"
     values = [id]
-    book = SqlRunner.run(sql,values)[0]
+    book = SqlRunner.run(sql,values).first
     return Book.new(book)
   end
 
@@ -74,9 +74,9 @@ def save()
       SqlRunner.run(sql)
     end
 
-    def self.delete(id)
+    def delete()
        sql = "DELETE FROM books WHERE id = $1"
-       values=[id]
+       values=[@id]
        result = SqlRunner.run(sql,values)
      end
 
