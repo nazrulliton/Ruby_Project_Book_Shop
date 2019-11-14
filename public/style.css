@@ -1,10 +1,9 @@
 
-  body
-  {
-    background: #e8dc29;
-    background-image: url(https://www.pinclipart.com/picdir/middle/29-293661_bookselling-bookshop-clip-art-transprent-png-free-book.png);
+body  {
+    background: #e8dc2942;
+    background-image: url("https://img.freepik.com/free-photo/rows-books-library_73152-2680.jpg?size=626&ext=jpg");
     background-size: contain;
-    background-position: 50%;
+    background-position: left;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     height: 100vh;
