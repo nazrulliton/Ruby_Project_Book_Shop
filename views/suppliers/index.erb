@@ -1,10 +1,12 @@
-<h1>Suppliers</h1>
+<h2>Suppliers</h2>
 
 <table>
-  <tr>
-    <th>Name</th>
-    <th>Address</th>
-  </tr>
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+      </tr>
+    </thead>
 
 
   <% for supplier in @suppliers %>
@@ -12,7 +14,9 @@
     <td><a href="/suppliers/<%= supplier.id %>"><%= supplier.name %></a></td>
     <td><%= supplier.address %></td>
   </tr>
+
   <% end %>
   <a href="/suppliers/new">Add New</a>
-
+  <tfoot>
+  </tfoot>
 </table>
