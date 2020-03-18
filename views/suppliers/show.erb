@@ -1,8 +1,9 @@
-<h2><%= @supplier.name %></h2>
+<div class="show">
+<p>Supplier: <%= @supplier.name %></p>
 
 <p>Address: <%= @supplier.address %></p>
 
-<h3>Published the following:</h3>
+<p>Published the following:</p>
 
 <ul>
   <% @books.each do |book| %>
@@ -10,8 +11,15 @@
   <% end %>
 </ul>
 
-<a href="/suppliers/<%= @supplier.id %>/edit">Edit</a>
+
+<div class="showbottom">
+
+
+
 
 <form action="/suppliers/<%= @supplier.id%>/delete" method="POST">
 <input type="submit" value="Delete">
+<button type="button" name="button"><a href="/suppliers/<%= @supplier.id %>/edit">Edit</a></button>
 </form>
+</div>
+</div>
