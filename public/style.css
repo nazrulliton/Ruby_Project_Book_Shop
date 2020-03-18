@@ -30,10 +30,11 @@ nav a.active {
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.9em;
   color: white;
   margin-bottom: 20px;
   text-align: center;
+  text-decoration: underline;
 }
 
 h3 {
@@ -119,6 +120,12 @@ table tfoot td {
 
 a {
   color: #8499B1;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #593F62;
+  color: white;
 }
 
 
@@ -127,14 +134,13 @@ background-color: black;
 }
 .show {
   color: black;
-  padding-top: 20px;
   padding-bottom: 20px;
   border: 1.5px solid black;
   height: auto;
   width: 30%;
   text-align: center;
   margin: auto;
-  background-color: lightgrey;
+  background-color: white;
   margin-top: 20px;
   box-shadow:
     /* The top layer shadow */
@@ -151,4 +157,9 @@ background-color: black;
 
 .show p {
   color: black;
+}
+
+.showhead {
+  background-color: #593F62;
+  height: 30px;
 }

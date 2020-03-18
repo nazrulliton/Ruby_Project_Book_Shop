@@ -1,5 +1,7 @@
 <div class="show">
+  <div class="showhead">
 
+  </div>
 
 <p><%= @stock.book_name %> </p>
 
@@ -12,6 +14,7 @@
 
 <form action="/stock/<%= @stock.id%>/delete" method="POST">
 <input type="submit" value="Delete">
-<a href="/stock/<%= @stock.id%>/edit">Edit</a>
+<button type="button" name="button">
+<a href="/stock/<%= @stock.id%>/edit">Edit</a></button>
 </form>
 </div>
